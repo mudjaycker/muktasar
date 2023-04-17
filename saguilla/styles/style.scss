@@ -1,0 +1,85 @@
+@use "utils" as u;
+
+body {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  //   width: 100vw;
+  //   height: 100vh;
+}
+
+* {
+  font-family: "NovaMono for Powerline", Samanata;
+}
+
+#mother {
+  @include u.flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.columns {
+  @include u.flex($direction: "col");
+  width: 100vw;
+
+  .column0 {
+    // @include u.colors($type: "light");
+    background: linear-gradient(u.$gblue2, u.$green);
+    @include u.flex-column($size: 1.8);
+  }
+
+  .column1 {
+    @include u.colors($type: "dark");
+    @include u.flex-column($size: 4);
+  }
+}
+
+.rows {
+  @include u.flex($direction: "row");
+  row-gap: 30px;
+
+  .row {
+    height: 10vh;
+    @include u.mx;
+  }
+
+  #row0 {
+    // margin-top: 10px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 20vw;
+    }
+  }
+
+  #row1 {
+    background-color: u.$white;
+    height: fit-content;
+    @include u.flex($direction: "row");
+    @include u.px($x: 20px);
+
+    h2 {
+      align-self: center;
+      text-decoration: underline;
+    }
+  }
+  #row2 {
+    background-color: royalblue;
+    // height: calc(40vh + 30px);
+    height: fit-content;
+  }
+  #row3 {
+    background-color: white;
+  }
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    page-break-after: always;
+  }
+}

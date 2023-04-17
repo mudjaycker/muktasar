@@ -1,0 +1,52 @@
+@mixin var-theme($bgcolor, $text-color) {
+  background-color: $bgcolor;
+  color: $text-color;
+}
+
+@mixin mx($x: 10px) {
+  margin-left: $x;
+  margin-right: $x;
+}
+@mixin px($x: 10px) {
+  padding-left: $x;
+  padding-right: $x;
+}
+@mixin my($y: 10px) {
+  margin-top: $y;
+  margin-bottom: $y;
+}
+
+@mixin colors($type) {
+  @if $type == "dark" {
+    @include var-theme($bgcolor: $gblue, $text-color: $white);
+  } @else if $type == "light" {
+    @include var-theme($bgcolor: $lgreen, $text-color: $black);
+  } @else {
+    @include var-theme($bgcolor: $white, $text-color: $black);
+  }
+}
+
+@mixin flex($direction: "col") {
+  @if $direction == "col" {
+    display: flex;
+    flex-direction: row;
+  } @else {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@mixin flex-column($size, $is-parent: false) {
+  flex: $size;
+  @if $is-parent {
+    display: flex;
+  }
+}
+
+$black: #000000;
+$gblue: #577d86;
+$gblue2: #1e424a;
+$lgreen: #87cbb9;
+$green: #b9eddd;
+$white: #fff;
+$redo: #d05a5a;

@@ -1,0 +1,82 @@
+body {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "NovaMono for Powerline", Samanata;
+}
+
+#mother {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.columns .column0 {
+  background: linear-gradient(#1e424a, #b9eddd);
+  flex: 1.8;
+}
+.columns .column1 {
+  background-color: #577d86;
+  color: #fff;
+  flex: 4;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.rows .row {
+  height: 10vh;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.rows #row0 {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rows #row0 img {
+  width: 20vw;
+}
+.rows #row1 {
+  background-color: #fff;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.rows #row1 h2 {
+  align-self: center;
+  text-decoration: underline;
+}
+.rows #row2 {
+  background-color: royalblue;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.rows #row3 {
+  background-color: white;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    page-break-after: always;
+  }
+}/*# sourceMappingURL=style.css.map */
