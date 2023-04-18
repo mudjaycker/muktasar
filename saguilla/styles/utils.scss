@@ -1,3 +1,11 @@
+$black: #000000;
+$gblue: #577d86;
+$gblue2: #1e424a;
+$lgreen: #87cbb9;
+$green: #b9eddd;
+$white: #fff;
+$redo: #d05a5a;
+
 @mixin var-theme($bgcolor, $text-color) {
   background-color: $bgcolor;
   color: $text-color;
@@ -11,9 +19,15 @@
   padding-left: $x;
   padding-right: $x;
 }
+
 @mixin my($y: 10px) {
   margin-top: $y;
   margin-bottom: $y;
+}
+
+@mixin py($y: 10px) {
+  padding-top: $y;
+  padding-bottom: $y;
 }
 
 @mixin colors($type) {
@@ -67,11 +81,3 @@
   border-bottom-right-radius: 100px;
   text-align: center;
 }
-
-$black: #000000;
-$gblue: #577d86;
-$gblue2: #1e424a;
-$lgreen: #87cbb9;
-$green: #b9eddd;
-$white: #fff;
-$redo: #d05a5a;

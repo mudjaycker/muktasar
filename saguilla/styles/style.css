@@ -5,8 +5,13 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #1e424a;
+}
+
 * {
-  font-family: Samanata, "NovaMono for Powerline";
+  font-family: sans-serif;
   font-weight: 10;
 }
 
@@ -30,6 +35,37 @@ body {
   background-color: #577d86;
   color: #fff;
   flex: 4;
+}
+.columns .column1 #block-about {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  row-gap: 10px;
+}
+.columns .column1 #block-about h1 {
+  font-weight: bold;
+  text-align: center;
+}
+.columns .column1 #block-about #about0 {
+  border: 1px double;
+}
+.columns .column1 #block-about #about0 h3 {
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: 900;
+  font-size: larger;
+}
+.columns .column1 #block-about #about1 {
+  border: 1px solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.columns .column1 #block-about #about1 p {
+  font-size: larger;
 }
 
 .rows {

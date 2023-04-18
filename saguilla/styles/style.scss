@@ -7,8 +7,13 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: u.$gblue2;
+}
+
 * {
-  font-family: Samanata, "NovaMono for Powerline";
+  font-family: sans-serif;
   font-weight: 10;
 }
 
@@ -31,6 +36,38 @@ body {
   .column1 {
     @include u.colors($type: "dark");
     @include u.flex-column($size: 4);
+
+    #block-about {
+      @include u.flex("row");
+      @include u.px;
+      @include u.py;
+      row-gap: 10px;
+      
+      h1 {
+        font-weight: bold;
+        text-align: center;
+      }
+
+      #about0 {
+        border: 1px double;
+        h3 {
+          text-align: center;
+          text-transform: capitalize;
+          text-decoration: underline;
+          // font-variant: small-caps;
+          font-weight: 900;
+          font-size: larger;
+        }
+      }
+
+      #about1 {
+        border: 1px solid;
+        @include u.px;
+        p {
+          font-size: larger;
+        }
+      }
+    }
   }
 }
 
@@ -111,7 +148,7 @@ body {
       justify-content: space-between;
       padding-bottom: 4px;
 
-      :nth-child(1){
+      :nth-child(1) {
         width: 100px;
       }
 
@@ -134,8 +171,6 @@ body {
           @include u.jauge-qty($qty: 70%);
         }
       }
-
-
     }
   }
 }
