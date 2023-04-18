@@ -43,6 +43,25 @@
   }
 }
 
+@mixin jauge() {
+  background-color: $redo;
+  color: $redo;
+  border-radius: 100px;
+  position: relative;
+}
+
+@mixin jauge-qty($qty: 100%) {
+  background-color: $gblue;
+  color: $white;
+  width: $qty;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100px;
+  text-align: center;
+}
+
 $black: #000000;
 $gblue: #577d86;
 $gblue2: #1e424a;

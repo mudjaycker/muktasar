@@ -6,7 +6,8 @@ body {
 }
 
 * {
-  font-family: "NovaMono for Powerline", Samanata;
+  font-family: Samanata, "NovaMono for Powerline";
+  font-weight: 10;
 }
 
 #mother {
@@ -49,9 +50,14 @@ body {
   justify-content: center;
 }
 .rows #row0 img {
-  width: 20vw;
+  width: 100%;
 }
-.rows #row1 {
+.rows h2 {
+  align-self: center;
+  text-decoration: underline;
+}
+.rows #row1,
+.rows #row2 {
   background-color: #fff;
   height: -moz-fit-content;
   height: fit-content;
@@ -59,18 +65,61 @@ body {
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
-}
-.rows #row1 h2 {
-  align-self: center;
-  text-decoration: underline;
-}
-.rows #row2 {
-  background-color: royalblue;
-  height: -moz-fit-content;
-  height: fit-content;
+  padding-bottom: 20px;
 }
 .rows #row3 {
   background-color: white;
+}
+.rows #robotic {
+  background-color: #d05a5a;
+  color: #d05a5a;
+  border-radius: 100px;
+  position: relative;
+}
+.rows #robotic #robotic-level {
+  background-color: #577d86;
+  color: #fff;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100px;
+  text-align: center;
+}
+.rows #electronum {
+  background-color: #d05a5a;
+  color: #d05a5a;
+  border-radius: 100px;
+  position: relative;
+}
+.rows #electronum #electronum-level {
+  background-color: #577d86;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100px;
+  text-align: center;
+}
+.rows #electronic {
+  background-color: #d05a5a;
+  color: #d05a5a;
+  border-radius: 100px;
+  position: relative;
+}
+.rows #electronic #electronic-level {
+  background-color: #577d86;
+  color: #fff;
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100px;
+  text-align: center;
 }
 
 @media print {

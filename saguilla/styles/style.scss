@@ -5,12 +5,11 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
-  //   width: 100vw;
-  //   height: 100vh;
 }
 
 * {
-  font-family: "NovaMono for Powerline", Samanata;
+  font-family: Samanata, "NovaMono for Powerline";
+  font-weight: 10;
 }
 
 #mother {
@@ -45,34 +44,61 @@ body {
   }
 
   #row0 {
-    // margin-top: 10px;
     height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
     img {
-      width: 20vw;
+      width: 100%;
     }
   }
 
-  #row1 {
+  h2 {
+    align-self: center;
+    text-decoration: underline;
+  }
+
+  #row1,
+  #row2 {
     background-color: u.$white;
     height: fit-content;
     @include u.flex($direction: "row");
     @include u.px($x: 20px);
+    padding-bottom: 20px;
+  }
 
-    h2 {
-      align-self: center;
-      text-decoration: underline;
-    }
-  }
-  #row2 {
-    background-color: royalblue;
-    // height: calc(40vh + 30px);
-    height: fit-content;
-  }
+  // #row2 {
+  // background-color: royalblue;
+  // height: fit-content;
+  // @include u.flex($direction: "row");
+
+  // }
+
   #row3 {
     background-color: white;
+  }
+
+  #robotic {
+    @include u.jauge;
+
+    #robotic-level {
+      @include u.jauge-qty($qty: 80%);
+    }
+  }
+
+  #electronum {
+    @include u.jauge;
+
+    #electronum-level {
+      @include u.jauge-qty;
+    }
+  }
+
+  #electronic {
+    @include u.jauge;
+    #electronic-level {
+      @include u.jauge-qty($qty: 95%);
+    }
   }
 }
 
