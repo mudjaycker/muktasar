@@ -46,8 +46,12 @@
 @mixin jauge() {
   background-color: $redo;
   color: $redo;
-  border-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
   position: relative;
+  width: 100%;
+  height: 20px;
+  font-size: small;
 }
 
 @mixin jauge-qty($qty: 100%) {
@@ -58,7 +62,9 @@
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 100px;
+  // border-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
   text-align: center;
 }
 
