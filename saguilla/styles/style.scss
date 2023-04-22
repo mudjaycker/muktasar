@@ -11,7 +11,7 @@ body {
 
 a {
   text-decoration: none;
-  color: u.$gblue2;
+  color: u.$black;
 }
 
 * {
@@ -22,7 +22,7 @@ a {
 #mother {
   @include u.flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .columns {
@@ -38,9 +38,15 @@ a {
   .column1 {
     @include u.colors($type: "dark");
     @include u.flex-column($size: 4);
+    height: 100vh;
     h1 {
       font-weight: bold;
       text-align: center;
+    }
+    h2 {
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: larger;
     }
 
     #block-about {
@@ -81,18 +87,20 @@ a {
       @include u.flex("row");
       border: 1px dotted;
 
-      .subtitle{
-        text-decoration: underline;
-        font-weight: 500;
-        font-size: larger;
-      }
-
-      .infos{
+      .infos {
         @include u.flex;
         column-gap: 20px;
         margin-top: -10px;
       }
     }
+  }
+
+  #details {
+    border: 1px double;
+    @include u.mx;
+    @include u.my;
+    @include u.px($x: 20px);
+    margin-bottom: 140px;
   }
 }
 
