@@ -1,10 +1,12 @@
-@use "utils" as u;
+@use "_utils" as u;
+// @use "sass:color";
 
 body {
   align-items: center;
   justify-content: center;
   margin: 0;
   padding: 0;
+  // background-color: color.scale(u.$green, $lightness: 20%);
 }
 
 a {
@@ -36,20 +38,18 @@ a {
   .column1 {
     @include u.colors($type: "dark");
     @include u.flex-column($size: 4);
+    h1 {
+      font-weight: bold;
+      text-align: center;
+    }
 
     #block-about {
       @include u.flex("row");
       @include u.px;
       @include u.py;
       row-gap: 10px;
-      
-      h1 {
-        font-weight: bold;
-        text-align: center;
-      }
 
       #about0 {
-        border: 1px double;
         h3 {
           text-align: center;
           text-transform: capitalize;
@@ -66,6 +66,31 @@ a {
         p {
           font-size: larger;
         }
+      }
+    }
+  }
+
+  #block-experience {
+    border: 1px double;
+    @include u.px($x: 20px);
+    @include u.mx;
+
+    .sub-content {
+      @include u.px($x: 20px);
+      @include u.my;
+      @include u.flex("row");
+      border: 1px dotted;
+
+      .subtitle{
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: larger;
+      }
+
+      .infos{
+        @include u.flex;
+        column-gap: 20px;
+        margin-top: -10px;
       }
     }
   }
