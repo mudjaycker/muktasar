@@ -15,27 +15,23 @@ a {
   font-weight: 10;
 }
 
-#mother {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 100%;
-}
-
 .columns {
   display: flex;
   flex-direction: row;
-  width: 100vw;
 }
 .columns .column0 {
+  flex: 1;
   background: linear-gradient(#1e424a, #b9eddd);
-  flex: 1.8;
+  font-size: 1em;
 }
 .columns .column1 {
+  display: flex;
+  flex-direction: column;
   background-color: #577d86;
   color: #fff;
   flex: 4;
-  height: 100vh;
+  font-size: 0.94em;
+  row-gap: 10px;
 }
 .columns .column1 h1 {
   font-weight: bold;
@@ -101,7 +97,13 @@ a {
   margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 140px;
+}
+.columns #details .columns {
+  display: flex;
+  flex-direction: row;
+}
+.columns #details .columns .column {
+  flex: 100px;
 }
 
 .rows {
@@ -123,6 +125,7 @@ a {
 }
 .rows #row0 img {
   width: 100%;
+  margin-top: 10px;
 }
 .rows h2 {
   align-self: center;

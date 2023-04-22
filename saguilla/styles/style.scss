@@ -17,28 +17,27 @@ a {
 * {
   font-family: sans-serif;
   font-weight: 10;
-}
-
-#mother {
-  @include u.flex;
-  width: 100vw;
-  height: 100%;
+  // font-size: 30;
 }
 
 .columns {
   @include u.flex($direction: "col");
-  width: 100vw;
 
   .column0 {
-    // @include u.colors($type: "light");
+    @include u.flex-column($size: 1);
     background: linear-gradient(u.$gblue2, u.$green);
-    @include u.flex-column($size: 1.8);
+    font-size: 1em;
+    // width: 50%;
   }
 
   .column1 {
+    @include u.flex($direction: "row");
     @include u.colors($type: "dark");
     @include u.flex-column($size: 4);
-    height: 100vh;
+    font-size: 0.94em;
+    // margin-bottom: 100px;
+    // height: 120vh;
+    row-gap: 10px;
     h1 {
       font-weight: bold;
       text-align: center;
@@ -80,7 +79,6 @@ a {
     border: 1px double;
     @include u.px($x: 20px);
     @include u.mx;
-
     .sub-content {
       @include u.px($x: 20px);
       @include u.my;
@@ -100,7 +98,13 @@ a {
     @include u.mx;
     @include u.my;
     @include u.px($x: 20px);
-    margin-bottom: 140px;
+
+    .columns {
+      @include u.flex($direction: "col");
+      .column {
+        @include u.flex-column($size: 100px);
+      }
+    }
   }
 }
 
@@ -120,6 +124,7 @@ a {
     justify-content: center;
     img {
       width: 100%;
+      margin-top: 10px;
     }
   }
 
