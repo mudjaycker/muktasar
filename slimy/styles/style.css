@@ -7,13 +7,16 @@ body {
   background-color: rgb(229, 220, 220);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 #right {
-  display: block;
   background-color: rgb(240, 232, 232);
   height: 100vh;
   width: 40vh;
-  padding: 10px;
-  justify-content: center;
+  font-size: medium;
 }
 #right img {
   height: 20vh;
@@ -27,4 +30,24 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgb(229, 220, 220);
+}
+
+#contacts {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 23vh;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#contacts h3 {
+  text-align: center;
+}
+#contacts span {
+  display: flex;
+}
+#contacts span a,
+#contacts span p {
+  margin-left: 15px;
 }/*# sourceMappingURL=style.css.map */

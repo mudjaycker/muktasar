@@ -4,8 +4,13 @@ $height: 100vh;
 $width: 100vw;
 $img_size: $height/5;
 
-@mixin percentage($percent, $value){
-    width: ($percent * $value)/100
+@mixin margin_y($y: 10px) {
+  margin-top: $y;
+  margin-bottom: $y;
+}
+@mixin padding_y($y: 10px) {
+  padding-top: $y;
+  padding-bottom: $y;
 }
 
 body {
@@ -17,14 +22,17 @@ body {
   background-color: $gris2;
   // border: 3px solid black;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 #right {
-  display: block;
+  // display: block;
   background-color: $gris;
   height: $height;
-  @include percentage(40, $height);
-  padding: 10px;
-  justify-content: center;
+  width: (40 * $height)/100;
+  // padding: 10px;
+  font-size: medium;
 
   img {
     height: $img_size;
@@ -39,4 +47,24 @@ body {
   width: $width;
   height: $height;
   background-color: $gris2;
+}
+
+#contacts {
+  display: block;
+  height: fit-content;
+  width: $img_size + 3;
+  border: 1px solid black;
+  @include margin_y;
+
+  h3 {
+    text-align: center;
+  }
+
+  span {
+    display: flex;
+    a,
+    p {
+      margin-left: 15px;
+    }
+  }
 }
