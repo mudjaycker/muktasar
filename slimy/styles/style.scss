@@ -7,6 +7,7 @@ $height: 100vh;
 $width: 100vw;
 $img_size: $height/5;
 $details_width: $img_size + 3;
+$description_width: $details_width * 1.6;
 
 @mixin margin_y($y: 10px) {
   margin-top: $y;
@@ -43,11 +44,11 @@ a {
   height: $height;
   width: (40 * $height)/100;
   font-size: medium;
-  
+
   h3 {
     text-align: center;
-    word-break: break-all
-  };
+    word-break: break-all;
+  }
   img {
     height: $img_size;
     width: $img_size;
@@ -58,8 +59,7 @@ a {
   }
 }
 
-
-#details{
+#details {
   width: $details_width;
 }
 
@@ -79,7 +79,6 @@ a {
     }
   }
 }
-
 
 #languages {
   height: fit-content;
@@ -112,17 +111,41 @@ a {
   width: 92%;
 }
 
-ul{
-  border: $border; 
+ul {
+  border: $border;
   padding-bottom: 10px;
 
-  li{
+  li {
     margin-left: 10px;
   }
 }
 
 #left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: $width;
   height: $height;
   background-color: $gris2;
 }
+#description {
+  margin-left: 10px;
+  h1,
+  h2 {
+    text-align: center;
+  }
+  h2 {
+    font-size: medium;
+  }
+}
+#intro :nth-child(3),
+#text-intro h2 {
+  margin-top: 50px;
+}
+#text-intro {
+  width: $description_width;
+  word-wrap: break-word;
+  border-top: 0.2px dotted #000;
+}
+
