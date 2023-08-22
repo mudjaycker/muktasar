@@ -8,6 +8,7 @@ $width: 100vw;
 $img_size: $height/5;
 $details_width: $img_size + 3;
 $description_width: $details_width * 1.6;
+$border_doted: 0.2px dotted #000;
 
 @mixin margin_y($y: 10px) {
   margin-top: $y;
@@ -128,9 +129,10 @@ ul {
   width: $width;
   height: $height;
   background-color: $gris2;
+  // word-break: break-all;
 }
 #description {
-  margin-left: 10px;
+  margin-left: 30px;
   h1,
   h2 {
     text-align: center;
@@ -140,12 +142,20 @@ ul {
   }
 }
 #intro :nth-child(3),
-#text-intro h2 {
+#text-intro h2,
+#cursus h2 {
   margin-top: 50px;
 }
 #text-intro {
   width: $description_width;
   word-wrap: break-word;
-  border-top: 0.2px dotted #000;
+  border-top: $border_doted;
 }
 
+#experiences {
+  border-top: $border_doted;
+}
+
+#cursus{
+  border-top:$border_doted;
+}

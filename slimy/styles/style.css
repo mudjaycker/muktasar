@@ -109,7 +109,7 @@ ul li {
 }
 
 #description {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 #description h1,
 #description h2 {
@@ -120,12 +120,21 @@ ul li {
 }
 
 #intro :nth-child(3),
-#text-intro h2 {
+#text-intro h2,
+#cursus h2 {
   margin-top: 50px;
 }
 
 #text-intro {
   width: 36.8vh;
   word-wrap: break-word;
+  border-top: 0.2px dotted #000;
+}
+
+#experiences {
+  border-top: 0.2px dotted #000;
+}
+
+#cursus {
   border-top: 0.2px dotted #000;
 }/*# sourceMappingURL=style.css.map */
