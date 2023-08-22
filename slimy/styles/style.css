@@ -1,3 +1,7 @@
+* {
+  font-family: "Operator Mono SSm Book";
+}
+
 body {
   display: flex;
   margin: none;
@@ -10,6 +14,7 @@ body {
 a {
   text-decoration: none;
   color: black;
+  font-style: italic;
 }
 
 #right {
@@ -18,36 +23,83 @@ a {
   width: 40vh;
   font-size: medium;
 }
+#right h3 {
+  text-align: center;
+  word-break: break-all;
+}
 #right img {
   height: 20vh;
   width: 20vh;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 30%;
+  background: rgb(247, 222, 222);
 }
 
-#left {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(229, 220, 220);
+#details {
+  width: 23vh;
 }
 
 #contacts {
   display: block;
   height: -moz-fit-content;
   height: fit-content;
-  width: 23vh;
-  border: 1px solid black;
+  border: 1px solid #000;
+  padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-#contacts h3 {
-  text-align: center;
+  word-break: break-all;
 }
 #contacts span {
   display: flex;
 }
 #contacts span a,
 #contacts span p {
-  margin-left: 15px;
+  margin: 15px;
+}
+
+#languages {
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#languages .lang {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+#languages .jauge {
+  background-color: white;
+  width: 19.1666666667vh;
+  border-radius: 10px;
+  color: rgb(48, 80, 66);
+}
+
+#jauge-french,
+#jauge-chinesse {
+  background-color: rgb(48, 80, 66);
+  width: 100%;
+  border-radius: 10px;
+}
+
+#jauge-english {
+  background-color: rgb(48, 80, 66);
+  border-radius: 10px;
+  width: 92%;
+}
+
+ul {
+  border: 1px solid #000;
+  padding-bottom: 10px;
+}
+ul li {
+  margin-left: 10px;
+}
+
+#left {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(229, 220, 220);
 }/*# sourceMappingURL=style.css.map */

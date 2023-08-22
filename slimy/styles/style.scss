@@ -1,8 +1,12 @@
 $gris: rgb(240, 232, 232);
 $gris2: rgb(229, 220, 220);
+$gris3: rgb(247, 222, 222);
+$border: 1px solid #000;
+$jauge_color: rgb(48, 80, 66);
 $height: 100vh;
 $width: 100vw;
 $img_size: $height/5;
+$details_width: $img_size + 3;
 
 @mixin margin_y($y: 10px) {
   margin-top: $y;
@@ -11,6 +15,11 @@ $img_size: $height/5;
 @mixin padding_y($y: 10px) {
   padding-top: $y;
   padding-bottom: $y;
+}
+
+* {
+  font-family: "Operator Mono SSm Book";
+  // font-family: "Fira Code iScript";
 }
 
 body {
@@ -22,24 +31,93 @@ body {
   background-color: $gris2;
   // border: 3px solid black;
 }
+
 a {
   text-decoration: none;
   color: black;
+  font-style: italic;
 }
+
 #right {
-  // display: block;
   background-color: $gris;
   height: $height;
   width: (40 * $height)/100;
-  // padding: 10px;
   font-size: medium;
-
+  
+  h3 {
+    text-align: center;
+    word-break: break-all
+  };
   img {
     height: $img_size;
     width: $img_size;
     padding: 10px;
-    border: 1px solid black;
+    border: $border;
     border-radius: 30%;
+    background: $gris3;
+  }
+}
+
+
+#details{
+  width: $details_width;
+}
+
+#contacts {
+  display: block;
+  height: fit-content;
+  border: $border;
+  padding-left: 10px;
+  @include margin_y;
+  word-break: break-all;
+
+  span {
+    display: flex;
+    a,
+    p {
+      margin: 15px;
+    }
+  }
+}
+
+
+#languages {
+  height: fit-content;
+  border: $border;
+  @include margin_y(20px);
+
+  .lang {
+    @include margin_y(10px);
+    margin-left: 30px;
+  }
+
+  .jauge {
+    background-color: white;
+    width: $details_width/1.2;
+    border-radius: 10px;
+    color: $jauge_color;
+  }
+}
+
+#jauge-french,
+#jauge-chinesse {
+  background-color: $jauge_color;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#jauge-english {
+  background-color: $jauge_color;
+  border-radius: 10px;
+  width: 92%;
+}
+
+ul{
+  border: $border; 
+  padding-bottom: 10px;
+
+  li{
+    margin-left: 10px;
   }
 }
 
@@ -47,24 +125,4 @@ a {
   width: $width;
   height: $height;
   background-color: $gris2;
-}
-
-#contacts {
-  display: block;
-  height: fit-content;
-  width: $img_size + 3;
-  border: 1px solid black;
-  @include margin_y;
-
-  h3 {
-    text-align: center;
-  }
-
-  span {
-    display: flex;
-    a,
-    p {
-      margin-left: 15px;
-    }
-  }
 }
